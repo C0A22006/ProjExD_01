@@ -21,11 +21,13 @@ def main():
         x = tmr%1600
         screen.blit(bg_img, [-x,0])
         screen.blit(bg_img, [1600-x,0])
-        screen.blit(kk_imgs[tmr%2], [300 ,200])
 
+
+        akk_img = pg.transform.rotozoom(kk_img, tmr % 10, 1.0)
+        screen.blit(akk_img, [300 ,200])
 
         pg.display.update()
-        clock.tick(400)
+        clock.tick(100)
 
 
 if __name__ == "__main__":
