@@ -22,9 +22,11 @@ def main():
         screen.blit(bg_img, [-x,0])
         screen.blit(bg_img, [1600-x,0])
 
-
-        akk_img = pg.transform.rotozoom(kk_img, tmr % 10, 1.0)
-        screen.blit(akk_img, [300 ,200])
+        if tmr%100 <=50:
+            a = 1
+        else:
+            a = 0
+        screen.blit(kk_imgs[a], [300 ,200])
 
         pg.display.update()
         clock.tick(100)
